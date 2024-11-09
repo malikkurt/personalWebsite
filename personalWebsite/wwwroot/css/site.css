@@ -1,0 +1,218 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero {
+    background-color: #01161E;
+    color: #F1FAEE;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+    #hero h1 {
+        font-size: 4em;
+        margin: 0;
+        color: #92B4F4;
+        animation: fadeIn 2s ease-out;
+    }
+
+    #hero p {
+        font-size: 1.5em;
+        margin-top: 10px;
+        color: #A5C882;
+        animation: fadeIn 2s ease-out 0.5s;
+    }
+
+    #hero .btn {
+        padding: 10px 20px;
+        color: #F1FAEE;
+        background-color: #124559;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s;
+        margin-top: 20px;
+        animation: fadeIn 2s ease-out 1s;
+    }
+
+        #hero .btn:hover {
+            background-color: #92B4F4;
+            color: #01161E;
+        }
+
+
+
+/* Sosyal Medya Butonlarý */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aralýk ekleyelim */
+}
+
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    color: #F1FAEE;
+    background-color: #124559;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em; /* Ýkon boyutunu büyütüyoruz */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+    .social-btn:hover {
+        background-color: #92B4F4; /* Açýk mavi ton */
+        transform: scale(1.1); /* Hoverda buton biraz büyür */
+    }
+
+    /* Github Button */
+    .social-btn.github {
+        background-color: #333;
+    }
+
+        .social-btn.github:hover {
+            background-color: #24292f;
+        }
+
+    /* LinkedIn Button */
+    .social-btn.linkedin {
+        background-color: #0077b5;
+    }
+
+        .social-btn.linkedin:hover {
+            background-color: #00608c;
+        }
+
+    /* Email Button */
+    .social-btn.email {
+        background-color: #f39c12;
+    }
+
+        .social-btn.email:hover {
+            background-color: #e67e22;
+        }
+
+    /* Font Awesome Ýkonlarý */
+    .social-btn i {
+        font-size: 1.5em; /* Ýkon boyutunu ayarlýyoruz */
+        color: #fff;
+    }
+
+/* Main Content Layout */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.content-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+/* Card Style */
+.card {
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .card h3 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1.1em;
+        color: #555;
+    }
+
+/* Bölüm Düzenleri */
+.experience-list, .project-list, .skill-list, .education-list {
+    /*display: grid;*/
+    gap: 20px;
+}
+
+/* Skills Section */
+/* Yetenekler Ýkonlarý ve Progres Bar */
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #F1F5F9;
+    border-radius: 6px;
+    font-size: 1.1em;
+}
+
+    .skill-item i {
+        font-size: 2em; /* Ýkon boyutu */
+        color: #124559; /* Ýkon rengi */
+    }
+
+.skill-progress {
+    flex-grow: 1;
+    position: relative;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.skill-bar {
+    height: 100%;
+    background-color: #A5C882; /* Ýlerleme barýnýn rengi */
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    font-size: 0.9em;
+    color: #01161E;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 3em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .content-row {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}

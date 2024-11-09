@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.About?.Name's Portfolio</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section (Full Screen) -->
+    <section id="hero">
+        <div class="container">
+            <h1>Merhaba, Ben @ViewBag.About.Name</h1>
+            <p>Ben bir web geliştiricisiyim ve projelerimi paylaşmak için buradayım.</p>
+            <a href="#projects" class="btn">Projelerimi Gör</a>
+        </div>
+
+        <!-- Sosyal medya ikonları -->
+        <div class="social-links">
+            <a href="https://github.com/yourgithubusername" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i> <!-- GitHub ikonu -->
+            </a>
+            <a href="https://www.linkedin.com/in/yourlinkedinusername" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> <!-- LinkedIn ikonu -->
+            </a>
+            <a href="mailto:youremail@example.com" class="social-btn email">
+                <i class="fas fa-envelope"></i> <!-- E-mail ikonu -->
+            </a>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <div class="content-row">
+            <!-- First Column: Name and Description -->
+            <section id="about" class="section">
+                <div class="card">
+                    <h1>@ViewBag.About?.Name</h1>
+                    <h3>@ViewBag.About?.JobTitle</h3>
+                    <p>@ViewBag.About?.Description</p>
+                </div>
+            </section>
+
+            <!-- Second Column: Experience -->
+            <section id="experience" class="section">
+                <h2>Deneyim</h2>
+                <div class="experience-list">
+                    @foreach (var experience in ViewBag.Experiences ?? new List<ExperienceModel>())
+                    {
+                        <div class="card experience-item">
+                            <h3>@experience.Position</h3>
+                            <p>@experience.Company (@experience.Duration)</p>
+                            <p>@experience.Description</p>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <!-- Third Column: Education -->
+            <section id="education" class="section">
+                <h2>Eğitim</h2>
+                <div class="education-list">
+                    @foreach (var education in ViewBag.Education ?? new List<EducationModel>())
+                    {
+                        <div class="card experience-item">
+                            <h3>@education.Title (@education.Duration)</h3>
+                            <h3>@education.Position</h3>
+
+                            <p>@education.Description</p>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <!-- Forty Column: Projects and Skills -->
+            <section id="projects" class="section">
+                <h2>Projeler</h2>
+                <div class="project-list">
+                    @foreach (var project in ViewBag.Projects ?? new List<ProjectModel>())
+                    {
+                        <div class="card project-item">
+                            <h3>@project.Title</h3>
+                            <p>@project.Description</p>
+                            <p><strong>Teknolojiler:</strong> @project.Technologies</p>
+                            <p><a href="@project.Link" target="_blank">Projeyi Görüntüle</a></p>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Yetenekler</h2>
+                <ul class="skill-list">
+                    @foreach (var skill in ViewBag.Skills ?? new List<SkillModel>())
+                    {
+                        <li class="card skill-item">
+                            <i class="@skill.IconClass"></i> <!-- Font Awesome veya başka bir ikon sınıfını buraya ekleyin -->
+                            <strong>@skill.SkillName</strong>
+                            <div class="skill-progress">
+                                <div class="skill-bar" style="width: @skill.Proficiency%"></div>
+                                <span class="skill-percentage">@skill.Proficiency%</span>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year @ViewBag.About?.Name</p>
+    </footer>
+
+</body>
