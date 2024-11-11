@@ -26,15 +26,16 @@ namespace personalWebsite.Controllers
             // Projeler
             var projects = new List<ProjectModel>
             {
-                new ProjectModel { Title = "SQLConverter", Description = "MYSQL Kodlarýný PLSQL Kodlarýna çeviren bir masaüstü uygulamasý", Technologies = "C# .Net,MYSQL, PLSQL", Link = "https://github.com/malikkurt/MYSQLToPLSQLConverter" },
-                new ProjectModel { Title = "Cineverse", Description = "Identity,REDÝS,SEQ ve Mvc gibi teknolojileri kullandýðým bir web uygulamasý", Technologies = "ASP.NET MVC,REDÝS,SEQ, SQL", Link = "https://github.com/malikkurt/SeriesMVC" }
+                new ProjectModel { Title = "MYSQLToPLSQLConverter", Description = " MySQL sorgularýný PL/SQL'e dönüþtürmek için geliþtirilmiþ bir C# projesidir. Bu araç, veri tabaný taþýnma veya entegrasyon projelerinde, MySQL sorgularýný Oracle'ýn PL/SQL yapýsýna uygun hale getirmek için kullanýþlýdýr. Böylece, veri tabaný uyumsuzluk sorunlarýný giderme sürecini kolaylaþtýrýr.", Technologies = "C# .Net,MYSQL, PLSQL", Link = "https://github.com/malikkurt/MYSQLToPLSQLConverter" },
+                new ProjectModel { Title = "Cineverse", Description = "MVC (Model-View-Controller) mimarisiyle oluþturulmuþ bir web uygulamasýdýr. JavaScript, HTML, CSS, Pug, SCSS ve C# gibi teknolojiler kullanýlarak geliþtirilmiþtir. Proje, kullanýcýlarýn çeþitli dizileri görüntülemesi veya yönetmesi için bir yapý saðlar. ", Technologies = "ASP.NET MVC,REDÝS,SEQ, SQL", Link = "https://github.com/malikkurt/SeriesMVC" },
+                new ProjectModel { Title = "CompareXmlWithLinq", Description = "XML düðümlerini LINQ kullanarak karþýlaþtýrmayý amaçlayan bir C# projesidir. Bu proje, XML belgelerindeki yapýlarý ve deðerleri etkili bir þekilde karþýlaþtýrmak için LINQ sorgulama yeteneklerinden faydalanýr. XML verilerinin tutarlýlýðýný doðrulama, yapýlandýrma dosyalarýný karþýlaþtýrma veya veri senkronizasyonu gibi iþlemlerde kullanýlabilir.", Technologies = "C#, LINQ", Link = "https://github.com/malikkurt/CompareXmlNodeWithLinq" }
             };
 
             //Eðitim
             var education = new List<EducationModel>
             {
-                new EducationModel { Title="Karadeniz Teknik Üniversitesi", Position="Öðrenci", Description="Karadeniz Teknin Üniversitesi kurumunda yazýlým mühendisliði öðrencisi ", Duration="2021-2024"},
-                new EducationModel { Title="Kýrklareli Üniversitesi", Position="Öðrenci", Description="Kýrklareli Üniversitesi kurumunda yazýlým mühendisliði öðrencisi ", Duration="2020-2021"}
+                new EducationModel { Title="Karadeniz Teknik Üniversitesi", Position="Yazýlým Mühendisliði", Description="Lisans ", Duration="2021-2024"},
+                new EducationModel { Title="Kýrklareli Üniversitesi", Position="Yazýlým Mühendisliði", Description="Lisans", Duration="2020-2021"}
             };
 
             // Deneyim
@@ -48,10 +49,11 @@ namespace personalWebsite.Controllers
             // Yetenekler
             var skills = new List<SkillModel>
             {
-                new SkillModel{SkillName="C#", Proficiency=100, IconClass="fa-solid fa-code"},
-                new SkillModel { SkillName = "HTML", Proficiency = 90, IconClass = "fab fa-html5" },
-                new SkillModel { SkillName = "CSS", Proficiency = 80, IconClass = "fab fa-css3-alt" },
-                new SkillModel { SkillName = "JavaScript", Proficiency = 75, IconClass = "fab fa-js" }
+                new SkillModel {SkillName="C#", Proficiency=100, IconClass="fa-solid fa-code"},
+                new SkillModel { SkillName = "HTML", Proficiency = 100, IconClass = "fab fa-html5" },
+                new SkillModel { SkillName = "CSS", Proficiency = 100, IconClass = "fab fa-css3-alt" },
+                new SkillModel { SkillName = "JavaScript", Proficiency = 100, IconClass = "fab fa-js" },
+                new SkillModel { SkillName = "Wordpress", Proficiency = 100, IconClass = "fab fa-wordpress" }
             };
        
 
