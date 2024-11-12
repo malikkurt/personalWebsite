@@ -71,7 +71,7 @@
                             <p>@experience.Description</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">@experience.Duration</span></div>
-                    </div> 
+                    </div>
                 }
         </section>
         <hr class="m-0" />
@@ -79,7 +79,7 @@
         <section class="resume-section" id="education">
             <div class="resume-section-content">
                 <h2 class="mb-5">Eğitim</h2>
-                @foreach(var education in ViewBag.Education ?? new List<EducationModel>())
+                @foreach (var education in ViewBag.Education ?? new List<EducationModel>())
                 {
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -98,18 +98,14 @@
                 <h2 class="mb-5">Yetenekler</h2>
                 <div class="subheading mb-3">Programlama Dilleri & Araçlar</div>
                 <ul class="list-inline dev-icons">
-                    
+
+                    <li class="list-inline-item"><i class="fa-solid fa-c"></i></li>
                     <li class="list-inline-item"><i class="fa-brands fa-java"></i></li>
                     <li class="list-inline-item"><i class="fab fa-html5"></i></li>
                     <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
                     <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                   @*  <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-less"></i></li> *@
                     <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    
+
                 </ul>
                 <div class="subheading mb-3">Çalışma Prensipleri</div>
                 <ul class="fa-ul mb-0">
@@ -125,7 +121,7 @@
                         <span class="fa-li"><i class="fas fa-check"></i></span>
                         Çevik Proje Geliştirme & Scrum
                     </li>
-                    
+
                 </ul>
             </div>
         </section>
@@ -150,7 +146,7 @@
                             <div class="subheading mb-3">@project.Technologies</div>
                             <div>@project.Description</div>
                         </div>
-                        
+
                         <a href=@project.Link>Projeyi Gör</a>
                     </div>
                 }
